@@ -1,0 +1,41 @@
+import turtle as t
+
+# Set up the Turtle screen
+t.bgcolor("white")
+t.title("Heart with Love")
+
+# Function to draw a filled heart
+def draw_heart():
+    t.begin_fill()
+    t.color("red")
+    t.fillcolor("red")
+    t.left(140)
+    t.forward(200)
+    for _ in range(200):
+        t.right(1)
+        t.forward(2)
+    t.left(120)
+    for _ in range(200):
+        t.right(1)
+        t.forward(2)
+    t.forward(200)
+    t.end_fill()
+
+# Function to write "Love" text
+def write_love_text():
+    t.penup()
+    t.goto(0, -250)
+    t.color("black")
+    t.write("Love", align="center", font=("Arial", 36, "normal"))
+
+# Draw the heart
+draw_heart()
+
+# Write the "Love" text
+write_love_text()
+
+# Hide the Turtle cursor
+t.hideturtle()
+
+# Close the Turtle graphics window when clicked
+t.exitonclick()
